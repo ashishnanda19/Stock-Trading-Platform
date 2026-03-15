@@ -1,0 +1,51 @@
+version: "3.9"
+
+services:
+  backend:
+    build: .
+    container_name: stock-backend
+    restart: always
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    depends_on:
+      - mysql
+      - redis
+    command: npm run dev
+    networks:
+      - stock-network
+
+  mysql:
+    image: mysql:8.0
+    container_name: stock-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: stockdb
+      MYSQL_USER: stockuser
+      MYSQL_PASSWORD: stockpass
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    networks:
+      - stock-network
+
+  redis:
+    image: redis:7
+    container_name: stock-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - stock-network
+
+volumes:
+  mysql_data:
+  redis_data:
+
+networks:
+  stock-network:
+    driver: bridge
