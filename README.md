@@ -1,4 +1,4 @@
-<h1 align="center" style="font-weight: bold;">Stock Trading Backend API 📈</h1>
+<h1 align="center" style="font-weight: bold;">Stock Trading Platform</h1>
 
 <p align="center">
  <a href="#tech">Technologies</a> • 
@@ -44,8 +44,8 @@ Make sure you have:
 <h3>Cloning the Repository</h3>
 
 ```bash
-git clone https://github.com/your-username/stockprojectbackend.git
-cd stockprojectbackend
+git clone https://github.com/your-username/Stock-Trading-Platform.git
+cd tock-Trading-Platform
 ```
 
 <h3>Environment Variables</h3>
@@ -137,8 +137,8 @@ Authorization: Bearer {access_token}
 **REQUEST**
 ```json
 {
-  "username": "arman",
-  "email": "arman@example.com",
+  "username": "ashish",
+  "email": "ashish@example.com",
   "password": "StrongPass123"
 }
 ```
@@ -158,7 +158,7 @@ Authorization: Bearer {access_token}
 **REQUEST**
 ```json
 {
-  "email": "arman@example.com",
+  "email": "ashish@example.com",
   "password": "StrongPass123"
 }
 ```
@@ -442,14 +442,4 @@ git push origin feature/your-feature
 - `test:` Adding tests
 - `chore:` Maintenance tasks
 
-<h3>Helpful Resources</h3>
 
-[📝 How to create a Pull Request](https://www.atlassian.com/git/tutorials/making-a-pull-request)
-
-[💾 Commit Conventions](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
-
-[📚 Express.js Documentation](https://expressjs.com/)
-
-[🔐 JWT Documentation](https://jwt.io/)
-
-[🗄️ MySQL Documentation](https://dev.mysql.com/doc/)
